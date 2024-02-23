@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SearchFragment">
-    <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/searchbar_scrolling_view_behavior">
-        <!-- Screen content goes here. -->
+        <!--       显示屏幕中需要的数据-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.appbar.AppBarLayout
@@ -25,17 +29,18 @@
             android:hint="搜索" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!--    点搜索框后显示的view-->
     <com.google.android.material.search.SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/searchView"
         android:hint="搜索view"
         app:layout_anchor="@id/search_bar">
 
         <TextView
+            android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/result"/>
+            android:layout_height="wrap_content" />
     </com.google.android.material.search.SearchView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

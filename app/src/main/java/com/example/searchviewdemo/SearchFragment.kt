@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.searchviewdemo.databinding.FragmentSearchBinding
 
-
 class SearchFragment : Fragment() {
     private lateinit var binding: FragmentSearchBinding
 
@@ -33,12 +32,16 @@ class SearchFragment : Fragment() {
         binding.searchView.editText.setOnEditorActionListener { v, actionId, event ->
             binding.searchBar.setText(binding.searchView.text)
             binding.searchView.hide()
+
+
+            /**
+             * 分支测试
+             */
             binding.result.text = binding.searchView.text
             false
         }
 
         return binding.root
     }
-
 
 }
