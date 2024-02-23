@@ -35,7 +35,7 @@ class SearchFragment : Fragment() {
 
 
             /**
-             * 分支测试踩xxx踩踩
+             *
              */
             binding.result.text = binding.searchView.text
             false
