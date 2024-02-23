@@ -34,7 +34,7 @@ class SearchFragment : Fragment() {
             binding.searchView.hide()
 
 
-            /**dd
+            /**ddss
              *
              */
             binding.result.text = binding.searchView.text
